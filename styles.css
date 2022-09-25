@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/*  # Variables  */
+
+:root {
+  /*  ## Colors  */
+
+  /*  ### Primary  */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /*  ### Neutral  */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  /*  ## Typography  */
+
+  --main-font-size: 16px;
+  --family: 'Red Hat Display', sans-serif;
+  --font-regular: 500;
+  --font-bold: 700;
+  --font-black: 900;
+}
+
+/*  ## Global styles  */
+
+html {
+  font-size: var(--main-font-size);
+  font-family: var(--family);
+  line-height: 1.5em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(images/pattern-background-desktop.svg) no-repeat top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background: url(images/pattern-background-mobile.svg) no-repeat top;
+  }
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+/*  ## Card styles  */
+
+#card {
+  max-width: 350px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: .5px 10px 20px .5px rgba(0, 0, 0, 0.2);
+}
+
+#img__hero {
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0 0;
+}
+
+.content__container,
+.song__container,
+btn__container,
+h2 {
+  margin-block: 1.5rem;
+}
+
+.content__container {
+  text-align: center;
+}
+
+.content__container h2 {
+  color: var(--dark-blue);
+  font-weight: var(--font-black);
+}
+
+.content__container p {
+  color: var(--desaturated-blue);
+  font-weight: var(--font-regular);
+}
+
+.song__container {
+  display: flex;
+  background-color: var(--very-pale-blue);
+  max-width: 85%;
+  margin-inline: auto;
+  padding: .8rem;
+  border-radius: 10px;
+  align-items: center;
+  gap: 1rem;
+}
+
+#song__name {
+  color: var(--dark-blue);
+  font-weight: var(--font-bold);
+}
+
+#prize {
+  font-weight: var(--font-regular);
+  color: var(--desaturated-blue);
+}
+
+.link__container {
+  margin-left: auto;
+}
+
+.link__container a {
+  color: var(--bright-blue);
+  font-weight: var(--font-bold);
+  transition: all .2s ease-in-out;
+}
+
+.link__container a:hover {
+  color: var(--desaturated-blue);
+  text-decoration: none;
+}
+
+/*  ### Button styles  */
+.btn__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#proceed__btn {
+  width: 85%;
+  padding-block: .8rem;
+  color: #fff;
+  font-weight: var(--font-black);
+  background-color: var(--bright-blue);
+  border-radius: 5px;
+  border: none;
+  box-shadow: .5px 5px 20px .5px rgba(0, 0, 0, 0.4);
+  transition: all .2s ease-in-out;
+}
+
+#proceed__btn:hover {
+  background-color: var(--desaturated-blue);
+}
+
+#cancel__btn {
+  border: none;
+  color: var(--desaturated-blue);
+  font-weight: var(--font-black);
+  background-color: #fff;
+  transition: all .2s ease-in-out;
+}
+
+#cancel__btn:hover {
+  color: var(--dark-blue);
+}
+
+/*  ## Footer styles  */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
